@@ -12,9 +12,9 @@ public class Houses {
 	public static void main(String[] args) {
 		r.setX(50);
 		r.setY(540);
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 6; i++) {
 			String a = JOptionPane.showInputDialog(null, "what is the height you want the house to be?");
-			String color = JOptionPane.showInputDialog("Green, Blue, or Red for your new house?");
+
 			int c = Integer.parseInt(a);
 			if (c <= 60) {
 				small();
@@ -31,6 +31,17 @@ public class Houses {
 		r.setSpeed(10);
 		
 		r.penDown();
+		String color = JOptionPane.showInputDialog("Green, Blue, or Red for your new house?");
+		if(color.equals("red")) {
+			r.setPenColor(255,0,0);
+		}
+		else if(color.equals("green")) {
+			r.setPenColor(0,255,0);
+		}	
+			else{
+				r.setPenColor(0,0,255);	
+				}
+		
 		r.move(60);
 		String p = JOptionPane.showInputDialog("Do you want your roof flat or pointy?");
 		if (p.contentEquals("pointy")) {
@@ -57,6 +68,16 @@ public class Houses {
 		r.setSpeed(10);
 		r.setPenColor(150, 0, 0);
 		r.penDown();
+		String color = JOptionPane.showInputDialog("Green, Blue, or Red for your new house?");
+		if(color.equals("red")) {
+			r.setPenColor(255,0,0);
+		}
+		else if(color.equals("green")) {
+			r.setPenColor(0,255,0);
+		}	
+			else{
+				r.setPenColor(0,0,255);	
+				}
 		r.move(120);
 		String p = JOptionPane.showInputDialog("Do you want your roof flat or pointy?");
 		if (p.contentEquals("pointy")) {
@@ -82,6 +103,16 @@ public class Houses {
 		r.setSpeed(10);
 		r.setPenColor(150, 0, 0);
 		r.penDown();
+		String color = JOptionPane.showInputDialog("Green, Blue, or Red for your new house?");
+		if(color.equals("red")) {
+			r.setPenColor(255,0,0);
+		}
+		else if(color.equals("green")) {
+			r.setPenColor(0,255,0);
+		}	
+			else{
+				r.setPenColor(0,0,255);	
+				}
 		r.move(250);
 		String p = JOptionPane.showInputDialog("Do you want your roof flat or pointy?");
 		if (p.contentEquals("pointy")) {
