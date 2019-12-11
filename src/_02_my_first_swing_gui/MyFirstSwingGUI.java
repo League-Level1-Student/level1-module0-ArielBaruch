@@ -4,8 +4,6 @@ package _02_my_first_swing_gui;
  *    Level 1
  */
 
-import java.awt.Image;
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -14,64 +12,42 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-
 public class MyFirstSwingGUI {
-	public void run() {
-
-		// 1. Create and initialize an object of the JFrame class
-		JFrame frame= new JFrame();
-		// 2. Set your JFrame object to be visible
-		frame.setVisible(true);
-		// 3. Run your program. Do you see your window? It's probably very
-		// small.
-		//frame.setSize(1086, 1200);
-		// 4. Set the default close operation to JFrame.EXIT_ON_CLOSE
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// 5. Create and initialize an object of the JPanel class
-		JPanel panel = new JPanel();
-		// 6. Create and initialize an object of the JLabel class
-		JLabel label = new JLabel("                                      														                                                                                                                                                                        Greetings ladies and gentelmen");
-		// 7. Set the text of the JLabel to a lovely greeting.
+	public static void main(String[] args) {
+		//1. Create and initialize an object of the JFrame class
+		JFrame rob =new JFrame();
+		//2. Set your JFrame object to be visible
+		rob.setVisible(true);
+		//3. Run your program. Do you see your window? It's probably very small.
 		
-		//label.add("my text", SwingConstants.CENTER);
+		//4. Set the default close operation to JFrame.EXIT_ON_CLOSE
+		rob.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//5. Create and initialize an object of the JPanel class
+		JPanel bob =new JPanel();
+		//6. Create and initialize an object of the JLabel class
+		JLabel mom = new JLabel();
+		//7. Set the text of the JLabel to a lovely greeting.
+		mom.setText("cool");
+		//8. Add the JPanel object to the JFrame
+		rob.add(bob);
+		//9. Add the JLabel object to the JPanel
+		bob.add(mom);
+		//10. Pack your JFrame.
+		rob.pack();
+		//11. Run your program again. Do you see your message.
 		
-		// 8. Add the JPanel object to the JFrame
-		frame.add(panel);
-			
-		// 9. Add the JLabel object to the JPanel
-		frame.add(label);
-
-		// 10. Pack your JFrame.
-		frame.pack();
-
-		// 11. Run your program again. Do you see your message.
-		
-		// 12. Use the loadImage method to set the icon of the JLabel object.
-		String path = "/Users/league/Desktop/backyard.jpg";
-        File file = new File(path);
-        Image image = null;
-		try {
-			image = ImageIO.read(file);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		JLabel label1 = new JLabel(new ImageIcon(image));
-		panel.add(label1);
-        
-		// 13. Re-pack the JFrame object.
-		frame.pack();
-		
-		// 14. Run the program one more time. Do you see the image?
-
+		//12. Use the loadImage method to set the icon of the JLabel object.  
+		mom.setIcon(loadImage());
+		//13. Re-pack the JFrame object.
+		rob.pack();
+		//14. Run the program one more time. Do you see the image?
 	}
-
-	public ImageIcon loadImage() {
+	
+	public static ImageIcon loadImage(){
 		try {
-			return new ImageIcon(ImageIO.read(new MyFirstSwingGUI().getClass().getResourceAsStream("java.png")));
+			return new ImageIcon(ImageIO.read(new MyFirstSwingGUI().getClass().getResourceAsStream("backyard.jpg")));
 		} catch (IOException e) {
-
+			
 			return null;
 		}
-	}
-}
+	}}
