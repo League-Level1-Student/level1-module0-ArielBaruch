@@ -8,7 +8,7 @@ PImage pictureOfRecord;                        //as member variable
         pictureOfRecord= loadImage("record.png");      //in setup method
       pictureOfRecord.resize(600,600);     //in setup method  
       minim = new Minim(this);    //in the setup method
-  song = minim.loadFile("awesometrack.mp3", 512);   //in the setup method
+  song = minim.loadFile("awesomeTrack.mp3", 512);   //in the setup method
  
   }
        void draw(){
